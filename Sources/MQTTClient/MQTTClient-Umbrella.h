@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-// Core MQTT Session
+// Main MQTT Session (includes MQTTSessionDelegate)
 #import "MQTTSession.h"
-#import "MQTTSessionDelegate.h"
+
+// Message & Transport
 #import "MQTTDecoder.h"
 #import "MQTTMessage.h"
-#import "MQTTProperties.h"
-
-// Transports
 #import "MQTTTransport.h"
+
+// Socket Transports
 #import "MQTTCFSocketTransport.h"
 #import "MQTTSSLSecurityPolicyTransport.h"
 
@@ -26,9 +26,5 @@
 
 // Utilities
 #import "MQTTLog.h"
-
-// Logging Framework Version
-FOUNDATION_EXPORT double MQTTClientVersionNumber;
-FOUNDATION_EXPORT const unsigned char MQTTClientVersionString[];
 
 #endif /* MQTTCLIENT_UMBRELLA_H */
