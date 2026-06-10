@@ -27,8 +27,7 @@ let package = Package(
             linkerSettings: [
                 .linkedFramework("CFNetwork"),
                 .linkedFramework("CoreData"),
-                .linkedFramework("Security"),
-                .linkedFramework("SocketRocket", .when(platforms: [.iOS, .macOS, .tvOS]))
+                .linkedFramework("Security")
             ]
         )
     ]
