@@ -2,6 +2,7 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+
 let package = Package(
     name: "MQTTClient",
     platforms: [
@@ -20,10 +21,14 @@ let package = Package(
             name: "MQTTClient",
             path: "Sources/MQTTClient",
             publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath(".")
+            ],
             linkerSettings: [
                 .linkedFramework("CFNetwork"),
                 .linkedFramework("CoreData"),
-                .linkedFramework("Security")
+                .linkedFramework("Security"),
+                .linkedFramework("SocketRocket", .when(platforms: [.iOS, .macOS, .tvOS]))
             ]
         )
     ]

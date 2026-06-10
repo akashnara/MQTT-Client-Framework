@@ -1,0 +1,6 @@
+module MQTTClient {
+    umbrella header "MQTTClient-Umbrella.h"
+
+    export *
+    module * { export * }
+}
